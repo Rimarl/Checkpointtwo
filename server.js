@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
     if( (hour < 9 || hour > 17 ) || ( weekday > 5) ) { 
         
        
-        console.log("The web application is only available during working hours (Monday to Friday,  from 9 to 17)")
+        res.status(404).send("The web application is only available during working hours (Monday to Friday,  from 9 to 17)");
     } 
    else{ 
    
